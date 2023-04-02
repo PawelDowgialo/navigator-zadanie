@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import Warszawa from './screens/Warszawa';
+import Bydgoszcz from './screens/Bydgoszcz';
+import Olsztyn from './screens/Olsztyn';
+import Home from './screens/Home';
+import { NavigationContainer } from "@react-navigation/native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Drawer = createDrawerNavigator()
+
+export default function App(){
+    return(
+        <NavigationContainer>
+          <Drawer.Navigator>
+            <Drawer.Screen name="Strona główna" component={Home} options={{
+              headerStyle: {
+                fontSize: 30,
+                backgroundColor: 'rgba(23, 54, 100, 0.7)',
+                borderWidth: 0,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontSize: 25,
+                color: '#fff',
+              }
+            }}/>
+            <Drawer.Screen name="Olsztyn" component={Olsztyn}/>
+            <Drawer.Screen name="Warszawa" component={Warszawa}/>
+            <Drawer.Screen name="Bydgoszcz" component={Bydgoszcz}/>
+          </Drawer.Navigator>
+        </NavigationContainer>
+    )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
