@@ -41,14 +41,14 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   textLogo: {
-    fontSize: 70,
+    fontSize: 50,
     fontWeight: 'bold',
     color: '#333',
     textAlign: 'center',
     margin: 20,
   },
   text: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#ffffff',
     textAlign: 'center',

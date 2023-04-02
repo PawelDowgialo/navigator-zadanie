@@ -46,7 +46,10 @@ const Olsztyn = () => {
             {windInfo} km/h
           </Text>
           <Text style={styles.textTemp}>
-            {temperature}°C, {temperaturef} °F
+            {temperature}°C
+          </Text>
+          <Text style={styles.textTemp}>
+            {temperaturef} °F
           </Text>
         </View>
       </ImageBackground>
@@ -71,8 +74,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '50%',
-    height: '50%',
+    width: '75%',
+    height: '70%',
   },
   textTitle: {
     fontSize: 60,
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   textTemp: {
-    fontSize: 90,
+    fontSize: 70,
     fontWeight: 'bold',
   },
   icon: {

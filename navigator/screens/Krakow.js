@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
-import bydgoszczZdj from '../assets/bydgoszczZdj.png';
+import krakowZdj from '../assets/krakowZdj.png';
 
 const Olsztyn = () => {
   const [temperature, setTemperature] = useState('');
@@ -12,7 +12,7 @@ const Olsztyn = () => {
   useEffect(() => {
     const Weather = async () => {
       const res = await fetch(
-        'https://api.weatherapi.com/v1/current.json?key=134ac8576a1e44719c0213252230104&q=Bydgoszcz'
+        'https://api.weatherapi.com/v1/current.json?key=134ac8576a1e44719c0213252230104&q=Krakow'
       );
       const data = await res.json();
 
@@ -32,10 +32,10 @@ const Olsztyn = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={bydgoszczZdj} style={styles.image}>
+      <ImageBackground source={krakowZdj} style={styles.image}>
         <View style={styles.textContainer}>
           <Text style={styles.textTitle}>
-            Bydgoszcz
+            Kraków
           </Text>
           <Text style={styles.textInfo}>
             {info}
