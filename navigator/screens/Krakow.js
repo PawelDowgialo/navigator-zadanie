@@ -49,7 +49,7 @@ const Olsztyn = () => {
             {temperature}°C
           </Text>
           <Text style={styles.textTemp}>
-            {temperaturef} °F
+            {temperaturef}°F
           </Text>
         </View>
       </ImageBackground>
